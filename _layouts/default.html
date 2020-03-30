@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html>
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
 
-{% include head.html %}
-
-<body>
-
-{% include header.html %}
-
-<div class="main">
-    <div class="container">
-        {{ content }}
+    <div id="main" role="main" class="wrapper-content">
+      {{ content }}
     </div>
-    <div class="page-scrollTop" data-toggle="tooltip" data-placement="top" title="Top">
-        <a href="javascript:void(0);">
-            <div class="arrow"></div>
-            <div class="stick"></div>
-        </a>
-    </div>
-</div>
 
-{% include footer.html %}
+    {% include analytics.html %}
+  </body>
 
-</body>
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      {% include footer.html %}
+    </footer>
+
+
 </html>
