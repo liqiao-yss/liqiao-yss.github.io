@@ -8,8 +8,6 @@ tags: [部署]
 comments: true
 ---
 
-# Linux部署sonar
-
 ### 安装前准备环境
 
 Centos7(Linux2.6/3.x/4/x  64-bit):

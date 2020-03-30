@@ -8,8 +8,6 @@ tags: [部署]
 comments: true
 ---
 
-## linux环境安装配置
-
 #### 防火墙配置
 
 1.关闭防火墙
