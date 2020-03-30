@@ -4,7 +4,7 @@ title: linux环境部署sonar
 date: 2020-03-20
 Author: mimo
 categories: 
-tags: [部署, document]
+tags: [部署]
 comments: true
 ---
 
