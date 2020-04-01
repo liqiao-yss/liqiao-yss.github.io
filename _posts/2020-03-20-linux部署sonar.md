@@ -36,7 +36,7 @@ Centos7(Linux2.6/3.x/4/x  64-bit):
 
 ### 安装jdk
 
-下载链接：https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
+下载链接：[https://www.oracle.com/java/technologies/javase-jdk8-downloads.html](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html)
 
 选择jdk-8u211-linux-x64.rpm下载
 
