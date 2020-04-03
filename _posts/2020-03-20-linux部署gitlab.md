@@ -6,6 +6,7 @@ Author: mimo
 categories: 
 tags: [部署]
 comments: true
+typora-root-url: ..\
 ---
 
 #### 防火墙配置
@@ -132,9 +133,9 @@ vi /etc/gitlab/gitlab.rb
 将 external_url 的 http改成https
 ```
 
-![1583133872239](C:\Users\mimo\AppData\Roaming\Typora\typora-user-images\1583133872239.png)
+![1583133872239](/document_image/1583133872239.png)
 
-![1583133922689](C:\Users\mimo\AppData\Roaming\Typora\typora-user-images\1583133922689.png)
+![1583133922689](/document_image/1583133922689.png)
 
 初始化gitlab相关的所有配置
 

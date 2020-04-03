@@ -6,6 +6,7 @@ Author: mimo
 categories: 
 tags: [部署]
 comments: true
+typora-root-url: ..
 ---
 
 ### 安装前准备环境
@@ -122,15 +123,15 @@ etc/my.cnf
 
 ### 安装SonarQube
 
-1.下载 SonarQube
+##### 1.下载 SonarQube
 
 当前版本： 7.7 [下载链接](https://www.sonarqube.org/downloads/)
 
-2.解压
+##### 2.解压
 
 得到当前路径: `/opt/sonarqube-7.7`
 
-3.修改配置文件
+##### 3.修改配置文件
 
 vi  /opt/sonarqube-7.7/conf/sonar.properties
 
@@ -141,7 +142,7 @@ sonar.jdbc.password=
 sonar.jdbc.url=
 ```
 
-4.新增用户
+##### 4.新增用户
 
 > SonarQube不能以root启动
 
@@ -154,7 +155,7 @@ passwd sonarqube
 chown -R sonarqube:sonarqube /opt/sonarqube-7.7
 ```
 
-5.默认SonarQube启动在9000端口
+##### 5.默认SonarQube启动在9000端口
 
 ```
 firewall-cmd --add-port=9000/tcp
@@ -162,7 +163,7 @@ systemctl stop firewalld
 systemctl disable firewalld
 ```
 
-6.以服务启动SonarQube
+##### 6.以服务启动SonarQube
 
 - 创建文件
 
@@ -207,11 +208,34 @@ sudo systemctl restart sonarqube.service
 sudo systemctl status sonarqube.service
 ```
 
+##### 7.插入新插件
+
+```
+su root
+```
+
+将插件放入/opt/sonarqube-7.7/extensions/plugins中
+
+更改新插件权限
+
+```
+chown sonarqube:sonarqube -R yss.sonar
+```
+
+------
+
 - 查看日志
 
-  ```
-  vim /opt/sonarqube-7.7/logs/web.log
-  ```
+```
+vim /opt/sonarqube-7.7/logs/web.log
+```
+
+- 查看数据源
+
+
+```
+vi /opt/sonarqube-7.7/conf/sonar.properties
+```
 
 ------
 
@@ -219,7 +243,7 @@ sudo systemctl status sonarqube.service
 
 1.使用sudo命令时，出现问题：
 
-![1583482617566](C:\Users\mimo\AppData\Roaming\Typora\typora-user-images\1583482617566.png)
+![1583482617566](/document_image/1583482617566.png)
 
 解决：
 
