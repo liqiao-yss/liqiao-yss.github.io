@@ -4,7 +4,7 @@ title: linux环境部署sonar
 date: 2020-03-20
 Author: mimo
 categories: 
-tags: [部署]
+tags: [部署,sonar]
 comments: true
 typora-root-url: ..
 ---
@@ -224,6 +224,8 @@ chown sonarqube:sonarqube -R yss.sonar
 
 ------
 
+常用命令：
+
 - 查看日志
 
 ```
@@ -236,6 +238,48 @@ vim /opt/sonarqube-7.7/logs/web.log
 ```
 vi /opt/sonarqube-7.7/conf/sonar.properties
 ```
+
+------
+
+### 与Maven集成
+
+[https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/)
+
+%MAVEN_HOME/conf%或~.m2的settings.xml文件编辑：
+
+```
+<settings>
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                  http://myserver:9000
+                </sonar.host.url>
+            </properties>
+        </profile>
+     </profiles>
+</settings>
+```
+
+分析
+
+```
+clean verify sonar:sonar
+```
+
+------
+
+### 编写规则
+
+[https://github.com/SonarSource/sonar-java/blob/master/docs/CUSTOM_RULES_101.md#registering-the-rule-in-the-custom-plugin](https://github.com/SonarSource/sonar-java/blob/master/docs/CUSTOM_RULES_101.md#registering-the-rule-in-the-custom-plugin)
 
 ------
 
