@@ -27,7 +27,7 @@ typora-root-url: ..
 ##### 1. 根据修饰对象分类
 
 - 修饰代码块
-  - synchronized(this|object) {}
+  - synchronized(this或object) {}
   - synchronized(类.class) {}
 - 修饰方法
   - 修饰非静态方法
@@ -39,7 +39,7 @@ typora-root-url: ..
 
   > 如果是同一个实例，就会按顺序访问，但是如果是不同实例，就可以同时访问。
 
-  - synchronized(this|object) {}
+  - synchronized(this或object) {}
   - 修饰非静态方法
 
 - 获取类锁
