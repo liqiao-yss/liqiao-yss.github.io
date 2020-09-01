@@ -76,6 +76,6 @@ public static int isBlackOrWhite(int colorInt) {
 }
 ```
 
-方法前：![](E:\blog\liqiao-yss.github.io\document_image\3.png)
+方法前：![](document_image/3.png)
 
-方法后：![](E:\blog\liqiao-yss.github.io\document_image\3plus.png)
+方法后：![](document_image/3plus.png)
